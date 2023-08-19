@@ -1,0 +1,25 @@
+# Faire un algorithme pour vérifier si un nombre est un palindrome (lisible dans les deux sens) 
+
+"""def isPalindrome(x):
+
+    
+    # Si nombre négatif alors il n'est pas un palindrome 
+        
+    if x < 0 :
+        return print(False) 
+        
+    # Lire dans un sens et dans l'autre sens et comparer si équivalent
+      
+    else : 
+        chaine = str(x)
+        rev = chaine[::-1]
+
+        if chaine == rev : 
+             
+            return print(True)
+
+        else : 
+            return print(False)
+
+"""
+
