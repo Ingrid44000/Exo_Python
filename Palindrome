@@ -1,4 +1,4 @@
-# Faire un algorithme pour vérifier si un nombre est un palindrome (lisible dans les deux sens) 
+# Créer une fonction pour vérifier si un nombre est un palindrome (lisible dans les deux sens) 
 
 """def isPalindrome(x):
 
