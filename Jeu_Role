@@ -1,0 +1,112 @@
+# Jeu de rôle 
+
+===================================================== Première solution ================================================
+
+"""import random 
+
+ME_HEALTH = 50
+
+ENEMY_HEALTH = 50
+
+
+compteur_potion = 3
+potion = random.randint(15,50)
+
+user_choice = ""
+
+
+
+
+#Boucle pour demander à utilisateur son choix 
+    
+while True : 
+    while user_choice != "1" or user_choice != 2 and ME_HEALTH>0 and ENEMY_HEALTH >0:
+        user_choice = input(f"Souhaitez-vous attaquer (1) ou utiliser une potion (2) ")
+
+# Si choix d'attaque alors perte de points de vie de l'ennemi         
+        if (user_choice =="1") :
+            print("Vous attaquez ")
+            ENEMY_HEALTH -= random.randint(5,11)
+            print(f"Points de vie de l'adversaire :  {ENEMY_HEALTH}")
+            
+#Si ennemi vivant après l'attaque. L'ennemi attaque 
+            if (ENEMY_HEALTH >= 0):
+                print("L'ennemi attaque")
+                ME_HEALTH -= random.randint(5,16)
+                print(f"Points de vie qu'il vous reste : {ME_HEALTH}")
+
+# Si choix de potion alors gain de points de vie 
+        elif (user_choice =="2"):
+            if compteur_potion != 0:
+                ME_HEALTH += potion
+                print(f"Il vous reste {ME_HEALTH} points de vie")
+                compteur_potion -= 1
+            else : print("Vous n'avez plus de potion")
+
+    if (ME_HEALTH <= 0):
+        print("Vous avez perdu")
+        break
+    elif (ENEMY_HEALTH <=0):
+        print("Vous avez gagné") 
+        break"""
+
+
+
+=================================================== Deuxième solution ====================================================
+import random
+
+ENEMY_HEALTH = 50
+PLAYER_HEALTH = 50
+NUMBER_OF_POTIONS = 3
+SKIP_TURN = False
+
+while True:
+    # Jeu du joueur
+    if SKIP_TURN:
+        print("Vous passez votre tour...")
+        SKIP_TURN = False
+    else:
+        user_choice = ""
+        while user_choice not in ["1", "2"]:
+            user_choice = input("Souhaitez-vous attaquer (1) ou utiliser une potion (2) ? ")
+
+        if user_choice == "1":  # Attaque
+            your_attack = random.randint(5, 10)
+            ENEMY_HEALTH -= your_attack
+            print(f"Vous avez infligé {your_attack} points de dégats à l'ennemi ⚔️")
+        elif user_choice == "2" and NUMBER_OF_POTIONS > 0:  # Potion
+            potion_health = random.randint(15, 50)
+            PLAYER_HEALTH += potion_health
+            NUMBER_OF_POTIONS -= 1
+            SKIP_TURN = True
+            print(f"Vous récupérez {potion_health} points de vie ❤️ ({NUMBER_OF_POTIONS} ? restantes)")
+        else:
+            print("Vous n'avez plus de potions...")
+            continue
+
+    
+    if ENEMY_HEALTH <= 0:
+        print("Tu as gagné ?")
+        break
+
+    # Attaque de l'ennemi
+    enemy_attack = random.randint(5, 15)
+    PLAYER_HEALTH -= enemy_attack
+    print(f"L'ennemi vous a infligé {enemy_attack} points de dégats ⚔️")
+
+    if PLAYER_HEALTH <= 0:
+        print("Tu as perdu ?")
+        break
+
+    # Stats
+    print(f"Il vous reste {PLAYER_HEALTH} points de vie.")
+    print(f"Il reste {ENEMY_HEALTH} points de vie à l'ennemi.")
+    print("-" * 50)
+
+print("Fin du jeu.")
+           
+    
+
+
+
+
