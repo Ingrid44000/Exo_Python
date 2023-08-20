@@ -1,0 +1,28 @@
+def creerGrille(nombreLignes, nombreColonnes):
+    grid = [[]] * nombreLignes 
+    for ligne in range(nombreLignes):
+        grid[ligne] = ["*"] * nombreColonnes 
+    return grid
+
+
+def affichergrille(grid):
+    for liste in grid:
+        print(liste)
+
+grille = creerGrille(2,3)
+affichergrille(grille)
+
+
+
+#################################################### Autre possibilité ##################################################
+
+# Utilisation compréhension de listes 
+
+grille = [["*" for i in range(2)] for j in range(3)]
+
+
+def affichergrille(grille):
+    for liste in grille:
+        print(liste)
+
+affichergrille(grille)
