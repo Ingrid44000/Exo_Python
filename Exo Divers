@@ -1,4 +1,5 @@
 
+# Exercice sur les conditions 
 
 """mdp = input("Entrez un mot de passe (min 8 caractères) : ")
 
@@ -17,9 +18,9 @@ else :
     print("Inscription terminée")
 """
 
+############################################################################
 
-#for i in range (1,11) :
-#    print(f"Utilisateur {i}")
+# Inverser une chaîne de caractères 
 
 """phrase ="Python"
 phrase_inverse = phrase[::-1]
@@ -27,10 +28,18 @@ phrase_inverse = phrase[::-1]
 for i in range (len(phrase_inverse)):
     print (phrase_inverse[i])"""
 
-#Autre méthode pour renverser une chaîne de caractère 
+
+# Autre méthode pour renverser une chaîne de caractère
+
 """mot = "Python"
 for lettre in mot[::-1]:
     print(lettre)"""
+
+
+###########################################################
+
+# Exercices divers (formatage de chaîne, compréhensions de listes)
+
 
 """nombre = 7
      
