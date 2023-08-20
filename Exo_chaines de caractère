@@ -1,0 +1,36 @@
+# Remplacer une lettre par une autre 
+
+"""def lectureMot (mot):
+    
+    
+    for i in mot.lower() :
+        
+        if (i == "o" ) :
+            
+            print(i.replace("o","a"))
+    
+            continue
+        
+        print(i)
+    
+lectureMot("Bonjour")
+
+"""
+
+#######################################################################################################
+
+# Compter le nombre d'itérations d'une lettre dans un mot
+
+def iterations (mot):
+    
+    compteur = 0
+    
+    for lettre in mot :
+        if lettre == "j" :
+            compteur += 1
+
+    return print(compteur)
+           
+            
+iterations ("bonjour")
+
